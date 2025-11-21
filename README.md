@@ -393,7 +393,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Issues**: [GitHub Issues](https://github.com/m85qurashi/1-Blocks/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/m85qurashi/1-Blocks/discussions)
-- **Email**: [Your contact email]
+- **Email**: [mohammed.qurashi@gmail.com](mailto:mohammed.qurashi@gmail.com)
 
 ---
 
@@ -426,6 +426,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
 
 **Built with ❤️ using AI-powered automation**
+
+**Made with love by [Mohammed Qurashi](mailto:mohammed.qurashi@gmail.com)** 💙
 
 [⬆ Back to Top](#flowengine-ai-powered-code-quality-automation)
 

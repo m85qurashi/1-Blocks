@@ -374,7 +374,7 @@ We especially welcome contributions in these areas:
 
 - **General Questions**: Open a [Discussion](https://github.com/m85qurashi/1-Blocks/discussions)
 - **Bug Reports**: Create an [Issue](https://github.com/m85qurashi/1-Blocks/issues)
-- **Security Issues**: Email [your-security-email]
+- **Security Issues**: Email [mohammed.qurashi@gmail.com](mailto:mohammed.qurashi@gmail.com)
 
 ## 📄 License
 
@@ -383,3 +383,5 @@ By contributing, you agree that your contributions will be licensed under the MI
 ---
 
 Thank you for contributing to FlowEngine! 🎉
+
+**Made with love by [Mohammed Qurashi](mailto:mohammed.qurashi@gmail.com)** 💙
