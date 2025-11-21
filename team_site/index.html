@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SteeringDirections Requests Hub</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <h1>Team Requests Hub</h1>
+      <p>Single place to track what each persona owes and how to respond.</p>
+    </div>
+    <div class="header-actions">
+      <a class="help-link" href="tree.html">Governance Tree</a>
+      <a class="help-link" href="help.html">Execution Help →</a>
+      <a class="help-link" href="ops.html">Ops Console</a>
+      <label class="search-label">
+        <span>Search</span>
+        <input type="search" id="search" placeholder="Persona, artifact, gate..." />
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <aside>
+      <h2>Personas</h2>
+      <ul id="persona-list"></ul>
+    </aside>
+
+    <section class="details" id="details">
+      <div class="empty-state">
+        <h2>Select a persona</h2>
+        <p>Review outstanding requests, file locations, and suggested response steps.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Run locally with <code>python3 -m http.server 8080</code> (from repo root) and open <a href="http://localhost:8080/team_site/" target="_blank" rel="noreferrer">http://localhost:8080/team_site/</a>.</p>
+  </footer>
+
+  <script src="assets/app.js" type="module"></script>
+</body>
+</html>

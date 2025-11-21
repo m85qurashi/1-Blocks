@@ -1,0 +1,30 @@
+block_id: financial_reporting_block
+version: 0.1.0
+purpose: "Generate Basel-I compliant financial statements"
+faces:
+  bottom_structure_spec:
+    datastore: s3
+    folders: ["reports", "supporting_docs"]
+  front_ui_spec:
+    type: cli
+    prompts:
+      - "Provide period start/end"
+      - "Upload account ledger"
+  back_integration_spec:
+    integrations:
+      - system: erp_api
+        action: fetch_balances
+  top_logic_spec:
+    rules:
+      - "Totals must match currency precision"
+  left_input_contract:
+    schema_ref: contracts/financial_reporting/input.v1.json
+  right_output_contract:
+    schema_ref: contracts/financial_reporting/output.v1.json
+acceptance_criteria:
+  - id: AC-FIN-001
+    text: "Balance sheet assets equal liabilities + equity"
+traceability:
+  - ac_id: AC-FIN-001
+    tests:
+      - tests/generated/financial_reporting/test_balance_sheet.py

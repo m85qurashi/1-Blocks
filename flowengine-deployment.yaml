@@ -1,0 +1,120 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flowengine
+  namespace: production
+  labels:
+    app: flowengine
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: flowengine
+  template:
+    metadata:
+      labels:
+        app: flowengine
+    spec:
+      containers:
+        - name: flowengine
+          image: flowengine:latest  # Replace with your actual image
+          ports:
+            - containerPort: 8080
+              name: http
+          env:
+            # Model API Keys (from secret)
+            - name: ANTHROPIC_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: model-api-keys
+                  key: anthropic
+            - name: OPENAI_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: model-api-keys
+                  key: openai
+            - name: GOOGLE_API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: model-api-keys
+                  key: google
+
+            # Database Configuration
+            - name: DB_HOST
+              value: "postgres.production.svc.cluster.local"
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_NAME
+              value: "flowengine_db"
+            - name: DB_USER
+              value: "flowengine_user"
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: password
+            - name: DB_POOL_SIZE
+              value: "100"
+
+            # Feature Flags
+            - name: ENABLE_CONTEXT_PRUNING
+              value: "true"
+            - name: CONTEXT_MAX_SIZE_KB
+              value: "180"
+            - name: ENABLE_CIRCUIT_BREAKER
+              value: "true"
+            - name: CIRCUIT_BREAKER_THRESHOLD
+              value: "85"
+            - name: ENABLE_PROVIDER_FAILOVER
+              value: "true"
+            - name: MAX_RETRY_ATTEMPTS
+              value: "2"
+            - name: FLOW_TIMEOUT_SECONDS
+              value: "180"
+
+            # Repository Allowlist (MVP: empty = all allowed)
+            - name: REPO_ALLOWLIST
+              value: ""
+
+          resources:
+            requests:
+              cpu: "2"
+              memory: "4Gi"
+            limits:
+              cpu: "4"
+              memory: "8Gi"
+
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 30
+            periodSeconds: 10
+
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 5
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: flowengine
+  namespace: production
+spec:
+  selector:
+    app: flowengine
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP
+
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: production

@@ -1,0 +1,130 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: postgres-init
+  namespace: production
+data:
+  init.sql: |
+    -- Create database and user
+    CREATE DATABASE flowengine_db;
+    CREATE USER flowengine_user WITH PASSWORD 'changeme';
+    GRANT ALL PRIVILEGES ON DATABASE flowengine_db TO flowengine_user;
+
+    -- Connect to flowengine_db
+    \c flowengine_db
+
+    -- Create schema
+    CREATE TABLE IF NOT EXISTS flows (
+      id VARCHAR(255) PRIMARY KEY,
+      repo VARCHAR(255) NOT NULL,
+      status VARCHAR(50) NOT NULL,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      duration_seconds INTEGER,
+      cost_dollars DECIMAL(10, 4),
+      context_bundle_sha256 VARCHAR(64),
+      quality_gates_passed INTEGER DEFAULT 0,
+      quality_gates_total INTEGER DEFAULT 5,
+      error_message TEXT,
+      metadata JSONB
+    );
+
+    CREATE INDEX idx_flows_repo ON flows(repo);
+    CREATE INDEX idx_flows_status ON flows(status);
+    CREATE INDEX idx_flows_created_at ON flows(created_at);
+
+    CREATE TABLE IF NOT EXISTS flow_metrics (
+      id SERIAL PRIMARY KEY,
+      flow_id VARCHAR(255) REFERENCES flows(id),
+      metric_name VARCHAR(100) NOT NULL,
+      metric_value DECIMAL(10, 4),
+      timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    );
+
+    CREATE INDEX idx_flow_metrics_flow_id ON flow_metrics(flow_id);
+    CREATE INDEX idx_flow_metrics_name ON flow_metrics(metric_name);
+
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: postgres
+  namespace: production
+spec:
+  serviceName: postgres
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:15
+          ports:
+            - containerPort: 5432
+              name: postgres
+          env:
+            - name: POSTGRES_DB
+              value: "flowengine_db"
+            - name: POSTGRES_USER
+              value: "flowengine_user"
+            - name: POSTGRES_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: postgres-credentials
+                  key: password
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          volumeMounts:
+            - name: postgres-storage
+              mountPath: /var/lib/postgresql/data
+            - name: postgres-init
+              mountPath: /docker-entrypoint-initdb.d
+          resources:
+            requests:
+              cpu: "1"
+              memory: "2Gi"
+            limits:
+              cpu: "2"
+              memory: "4Gi"
+      volumes:
+        - name: postgres-init
+          configMap:
+            name: postgres-init
+  volumeClaimTemplates:
+    - metadata:
+        name: postgres-storage
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 50Gi
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  namespace: production
+spec:
+  selector:
+    app: postgres
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  clusterIP: None
+
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: postgres-credentials
+  namespace: production
+type: Opaque
+stringData:
+  password: "changeme"  # Replace with secure password

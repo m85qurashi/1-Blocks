@@ -1,0 +1,17 @@
+@startuml
+title Delivery A FlowEngine (Plan Flow)
+actor CLI
+participant "FlowEngine" as FE
+participant "ContextBuilder" as CB
+participant "ModelRouter" as MR
+participant "TaskDB" as DB
+participant "ResponseMerger" as RM
+CLI -> FE: POST /flows/plan
+FE -> CB: buildContext(bundleInputs)
+CB --> FE: contextBundle
+FE -> MR: route(role=planner, bundle)
+MR --> FE: planResult
+FE -> DB: persist(TaskObject.plan)
+FE -> RM: merge(planResult)
+RM --> CLI: workPackages + metrics
+@enduml

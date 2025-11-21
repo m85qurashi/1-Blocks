@@ -1,0 +1,9 @@
+0- Governance/ — Governance Framework + SOP | Tip: Read this first for roles, phases, checklists
+1- SteeringDirections/ — Ideas, steering directives, requests | Tip: Steering persona artifacts, ideas, action items
+2- Business/ — Business persona workspace (BRD, ROI) | Tip: Budget, ROI models, business evidence
+3- Product/ — Product persona workspace (PRD, RTM) | Tip: PRD, acceptance criteria, pilot narrative
+4-Engineering/ — Engineering persona workspace (SRS, ADRs) | Tip: SRS, ADRs, schema docs, run logs
+5-QA/ — Quality persona workspace (Quality Plan, metrics) | Tip: Quality plan, test metrics, gating policy
+6-Data/ — Data & analytics workspace (measurement plan) | Tip: Instrumentation specs, dashboards, baselines
+7-SRE/ — SRE/Security workspace (SLOs, runbooks) | Tip: Runbooks, SLOs, rollback strategy
+planning/ — Planning package (phases 0–6) | Tip: All phase artifacts, runbooks, evidence

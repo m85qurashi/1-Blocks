@@ -1,0 +1,15 @@
+@startuml
+title Delivery B Verified Block Flow
+actor Author
+participant "Blueprint Service" as BS
+participant "Schema/Test Generator" as GEN
+participant "Verification Service" as VS
+participant "Catalog" as CAT
+Author -> BS: submit BlockBlueprint
+BS --> GEN: blueprint
+GEN --> BS: schemas + tests
+GEN -> VS: runSuites()
+VS --> GEN: results + mutationRate
+VS -> CAT: publishRequest(block_id@version)
+CAT --> Author: verificationDecision
+@enduml

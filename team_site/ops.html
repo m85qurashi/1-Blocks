@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlowEngine Ops Console</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Ops Console</h1>
+        <p>Submit ideas, track readiness, and monitor UAT in one place.</p>
+      </div>
+      <div class="header-actions">
+        <a class="help-link" href="index.html">Requests Hub</a>
+        <a class="help-link" href="help.html">Execution Help →</a>
+      </div>
+    </header>
+
+    <main class="ops-layout">
+      <section class="flex-stack">
+        <article class="card">
+          <h3>API Connection</h3>
+          <p class="muted">
+            Point to the running <code>repo_readiness_api</code> instance, paste your <code>X-API-Key</code>, then hit
+            <strong>Save &amp; Refresh</strong>.
+          </p>
+          <form id="connection-form" class="form-grid">
+            <label>
+              Base URL
+              <input type="url" id="base-url" placeholder="http://localhost:8081" required />
+            </label>
+            <label>
+              API Key
+              <input type="password" id="api-key" placeholder="READINESS_API_KEY" required />
+            </label>
+            <div class="form-actions">
+              <button class="primary" type="submit">Save &amp; Refresh</button>
+            </div>
+          </form>
+          <div id="status-bar" class="status-bar" data-tone="neutral">Waiting for connection…</div>
+        </article>
+
+        <article class="card">
+          <h3>Idea Intake</h3>
+          <form id="idea-form" class="form-grid">
+            <label>
+              Idea Name
+              <input type="text" id="idea-name" required />
+            </label>
+            <label>
+              Sponsoring Team
+              <input type="text" id="idea-team" required />
+            </label>
+            <label>
+              Workflow Family
+              <select id="idea-family" required>
+                <option value="compliance">Compliance</option>
+                <option value="security">Security</option>
+                <option value="testing">Testing</option>
+                <option value="deployment">Deployment</option>
+                <option value="monitoring">Monitoring</option>
+              </select>
+            </label>
+            <label class="full-span">
+              Desired Outcomes (JSON)
+              <textarea id="idea-outcomes" rows="3" placeholder='{"metric": "value"}'></textarea>
+            </label>
+            <label class="full-span">
+              Description
+              <textarea id="idea-description" rows="3"></textarea>
+            </label>
+            <div class="form-actions full-span">
+              <button class="primary" type="submit">Create Idea</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3>Readiness Checklist</h3>
+          <form id="readiness-form" class="form-grid">
+            <label>
+              Repository Name
+              <input type="text" id="repo-name" required />
+            </label>
+            <label>
+              Owner
+              <input type="text" id="repo-owner" required />
+            </label>
+            <label>
+              Training Complete?
+              <select id="repo-training">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </label>
+            <label>
+              CLI Installed?
+              <select id="repo-cli">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </label>
+            <label>
+              Tests ≥80%?
+              <select id="repo-tests">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </label>
+            <label>
+              Runbook Acknowledged?
+              <select id="repo-runbook">
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+              </select>
+            </label>
+            <label class="full-span">
+              Notes
+              <textarea id="repo-notes" rows="2"></textarea>
+            </label>
+            <div class="form-actions full-span">
+              <button class="primary" type="submit">Update Readiness</button>
+            </div>
+          </form>
+        </article>
+
+        <article class="card">
+          <h3>Wave Assignment</h3>
+          <form id="wave-form" class="form-grid">
+            <label>
+              Repository Name
+              <input type="text" id="wave-repo" required />
+            </label>
+            <label>
+              Wave
+              <select id="wave-name">
+                <option value="soak">Soak</option>
+                <option value="wave_1">Wave 1</option>
+                <option value="wave_2">Wave 2</option>
+                <option value="future">Future</option>
+              </select>
+            </label>
+            <label>
+              Scheduled Date
+              <input type="date" id="wave-date" />
+            </label>
+            <label>
+              Priority
+              <input type="number" id="wave-priority" value="0" />
+            </label>
+            <div class="form-actions full-span">
+              <button class="primary" type="submit">Assign Wave</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <section class="flex-stack">
+        <article class="card">
+          <h3>Quality Snapshot</h3>
+          <ul class="checklist">
+            <li>5-gate quality system operational (Contract, Coverage, Mutation, Security, LLM)</li>
+            <li>Claude Sonnet 4.5 integrated across 24+ repos (49 flow evidence)</li>
+            <li>OpenAI + Gemini keys staged for multi-LLM expansion</li>
+            <li>Total spend to date: $11.75 across 49 validation flows</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Idea Backlog</h3>
+          <table class="ops-table" id="ideas-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Team</th>
+                <th>Workflow</th>
+                <th>Created</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </article>
+
+        <article class="card">
+          <h3>Readiness Board</h3>
+          <table class="ops-table" id="readiness-table">
+            <thead>
+              <tr>
+                <th>Repo</th>
+                <th>Owner</th>
+                <th>Status</th>
+                <th>Checks</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </article>
+
+        <article class="card">
+          <h3>Wave Summary</h3>
+          <table class="ops-table" id="waves-table">
+            <thead>
+              <tr>
+                <th>Wave</th>
+                <th>Repos</th>
+                <th>Earliest</th>
+                <th>Latest</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </article>
+
+        <article class="card">
+          <h3>UAT &amp; Governance</h3>
+          <div class="ops-grid">
+            <div>
+              <strong>UAT Window</strong>
+              <p class="muted">Nov 16–24 — execute 10 pilot repos</p>
+            </div>
+            <div>
+              <strong>Hard Dates</strong>
+              <p class="muted">Dec 5 — G6 governance gate review</p>
+            </div>
+            <div>
+              <strong>Owners</strong>
+              <p class="muted">PM orchestrates schedule; Eng &amp; QA on call</p>
+            </div>
+            <div>
+              <strong>Evidence</strong>
+              <p class="muted">Update `MVP_METRICS_LOG.md` + `/evidence/phase1_quality_gates/`</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Start the API locally with
+        <code>uvicorn repo_readiness_api:app --reload --port 8081</code> (from <code>flowengine-app/</code>) and open this console
+        via <code>python3 -m http.server 8080</code>.
+      </p>
+    </footer>
+
+    <script src="assets/ops.js" type="module"></script>
+  </body>
+</html>

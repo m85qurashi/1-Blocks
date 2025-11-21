@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://example.com/schemas/block_blueprint.schema.json",
+  "title": "BlockBlueprint",
+  "type": "object",
+  "required": ["block_id", "version", "faces"],
+  "properties": {
+    "block_id": {"type": "string"},
+    "version": {"type": "string", "pattern": "[0-9]+\.[0-9]+\.[0-9]+"},
+    "purpose": {"type": "string"},
+    "faces": {
+      "type": "object",
+      "required": [
+        "bottom_structure_spec",
+        "front_ui_spec",
+        "back_integration_spec",
+        "top_logic_spec",
+        "left_input_contract",
+        "right_output_contract"
+      ],
+      "properties": {
+        "bottom_structure_spec": {"type": "object"},
+        "front_ui_spec": {"type": "object"},
+        "back_integration_spec": {"type": "object"},
+        "top_logic_spec": {"type": "object"},
+        "left_input_contract": {
+          "type": "object",
+          "required": ["schema_ref"],
+          "properties": {"schema_ref": {"type": "string"}}
+        },
+        "right_output_contract": {
+          "type": "object",
+          "required": ["schema_ref"],
+          "properties": {"schema_ref": {"type": "string"}}
+        }
+      }
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "text"],
+        "properties": {
+          "id": {"type": "string"},
+          "text": {"type": "string"}
+        }
+      }
+    },
+    "traceability": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["ac_id"],
+        "properties": {
+          "ac_id": {"type": "string"},
+          "tests": {"type": "array", "items": {"type": "string"}},
+          "files": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

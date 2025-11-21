@@ -1,0 +1,17 @@
+@startuml
+title Delivery C Integration Flow
+participant "FlowEngine" as FE
+participant "Integration Service" as IS
+participant "Block Service" as BLK
+participant "Artifact Registry" as AR
+FE -> IS: contextBundle(TaskObject)
+IS -> BLK: blueprintSlice + instructions
+BLK --> IS: implArtifacts + verification
+IS -> AR: store(artifacts, hashes)
+AR --> FE: artifactRefs
+IS --> FE: end-to-end completion
+note right of IS
+Ensures idempotent bundle IDs
+and immutable artifact links
+end note
+@enduml

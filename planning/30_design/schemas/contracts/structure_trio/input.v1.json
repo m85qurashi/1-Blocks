@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StructureTrioInput",
+  "type": "object",
+  "required": ["structure_key", "levels"],
+  "properties": {
+    "structure_key": {"type": "string"},
+    "levels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["level_id", "allowed_sets"],
+        "properties": {
+          "level_id": {"type": "string"},
+          "allowed_sets": {
+            "type": "array",
+            "items": {"type": "string"},
+            "minItems": 1
+          }
+        }
+      },
+      "minItems": 1
+    }
+  }
+}

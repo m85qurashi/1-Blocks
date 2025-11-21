@@ -1,0 +1,9 @@
+ID,Work Package,Owner,Notes
+1.1,Governance & Gates,PM,Maintain gate calendar and approvals
+2.2.1,ModelRouter,Platform Eng,models.yaml + routing lib
+2.2.2,FlowEngine,Platform Eng,Plan/Impl/Review/Docs pipelines
+3.2.1,BlockBlueprint schema,App Eng + PM,Six-face schema + JSON refs
+3.3.2,Test harness,QA + Eng,Unit/integration/property/mutation
+4.3,Integration service,Platform Eng,Context bundles + artifact links
+5.2,Performance & cost tests,SRE,Latency/cost dashboards
+6.2,Training,PM + DevRel,Docs/videos/checklists

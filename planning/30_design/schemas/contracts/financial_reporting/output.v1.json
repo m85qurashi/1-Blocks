@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FinancialReportingOutput",
+  "type": "object",
+  "required": ["status", "statements"],
+  "properties": {
+    "status": {"type": "string", "enum": ["verified_exact", "verified_equivalent", "needs_revision"]},
+    "statements": {
+      "type": "object",
+      "properties": {
+        "balance_sheet": {"type": "string"},
+        "income_statement": {"type": "string"},
+        "cash_flow": {"type": "string"}
+      }
+    },
+    "attachments": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

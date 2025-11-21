@@ -1,0 +1,151 @@
+[
+  {
+    "name": "Business",
+    "role": "Biz/Finance",
+    "focus": "ROI, budgets, stakeholder inputs",
+    "description": "Document ROI metrics, budget envelopes, and stakeholder feedback ahead of G5.",
+    "requests": [
+      "Fill in pilot ROI template with baseline vs pilot metrics",
+      "Confirm token budgets/vendor assumptions in BRD",
+      "Capture stakeholder feedback notes for Basel-I"
+    ],
+    "steps": [
+      "Open planning/50_pilot/evidence/biz/roi_template.md and add baseline + pilot numbers",
+      "Attach supporting spreadsheets/screenshots in planning/50_pilot/evidence/biz/",
+      "Update BRD financial section with latest cost assumptions",
+      "Ping SteeringDirections once metrics + notes are committed"
+    ],
+    "paths": [
+      "2- Business/artifacts/brd.md",
+      "planning/50_pilot/evidence/biz/roi_template.md"
+    ],
+    "documents": [
+      "planning/50_pilot/evidence/biz/roi_template.md",
+      "2- Business/artifacts/brd.md"
+    ]
+  },
+  {
+    "name": "Product",
+    "role": "PM",
+    "focus": "PRD updates, RTM, pilot narrative",
+    "description": "Keep PRD v1, acceptance criteria, and pilot story current as build progresses.",
+    "requests": [
+      "Capture scope deltas + decisions in PRD v1",
+      "Extend RTM with actual test file paths",
+      "Add pilot narrative section describing success criteria"
+    ],
+    "steps": [
+      "Edit 3- Product/artifacts/prd_v1.md with any new decisions",
+      "Update planning/20_definition/acceptance_criteria.md linking AC → tests",
+      "Add \"Pilot Reporting\" section to planning/50_pilot/pilot_plan.md",
+      "Share updates in next SteeringDirections sync"
+    ],
+    "paths": [
+      "3- Product/artifacts/prd_v1.md",
+      "planning/20_definition/acceptance_criteria.md",
+      "planning/50_pilot/pilot_plan.md"
+    ],
+    "documents": [
+      "3- Product/artifacts/prd_v1.md",
+      "planning/50_pilot/pilot_plan.md"
+    ]
+  },
+  {
+    "name": "Engineering",
+    "role": "TL / Platform / App Eng",
+    "focus": "Schemas, ADRs, run evidence",
+    "description": "Finalize schemas/ADRs and provide FlowEngine + verification evidence for pilot.",
+    "requests": [
+      "Ensure all schema examples are checked into planning/30_design/schemas",
+      "Add ADR references for FlowEngine, Verification, Integration services",
+      "Drop FlowEngine run logs + CLI transcripts into QA evidence folder"
+    ],
+    "steps": [
+      "Review planning/30_design/schemas for missing families and add as needed",
+      "Update 4-Engineering/artifacts/srs.md or ADR index with implementation notes",
+      "Export pilot run logs and place them under planning/50_pilot/evidence/qa/",
+      "Notify QA + SteeringDirections when logs are available"
+    ],
+    "paths": [
+      "4-Engineering/artifacts/srs.md",
+      "planning/30_design/schemas/",
+      "planning/50_pilot/evidence/qa/"
+    ],
+    "documents": [
+      "4-Engineering/artifacts/srs.md",
+      "planning/30_design/schemas/README.md"
+    ]
+  },
+  {
+    "name": "QA",
+    "role": "Quality",
+    "focus": "Test metrics, gating",
+    "description": "Maintain quality plan and populate metrics for Basel-I pilot.",
+    "requests": [
+      "Fill template_metrics.md after each run",
+      "Attach supporting CI artifacts/logs",
+      "Update Quality Plan if thresholds change"
+    ],
+    "steps": [
+      "Record flow success %, tokens, mutation kill-rate, BLOCKERS",
+      "Upload CI output/logs to planning/50_pilot/evidence/qa/",
+      "Adjust 5-QA/artifacts/quality_plan.md with new learnings"
+    ],
+    "paths": [
+      "planning/50_pilot/evidence/qa/template_metrics.md",
+      "5-QA/artifacts/quality_plan.md"
+    ],
+    "documents": [
+      "planning/50_pilot/evidence/qa/template_metrics.md",
+      "5-QA/artifacts/quality_plan.md"
+    ]
+  },
+  {
+    "name": "Data",
+    "role": "Analytics",
+    "focus": "Instrumentation, dashboards",
+    "description": "Deliver baseline + pilot metrics and ensure dashboards are accessible.",
+    "requests": [
+      "Implement instrumentation & link dashboards",
+      "Document baseline metrics and method",
+      "Plan adoption KPI tracking for launch"
+    ],
+    "steps": [
+      "Complete measurement plan tasks and add links/screenshots",
+      "Store dashboards or exports in evidence folder",
+      "Describe data pipelines + ownership in 6-Data workspace"
+    ],
+    "paths": [
+      "6-Data/artifacts/measurement_plan.md",
+      "planning/50_pilot/evidence/biz/"
+    ],
+    "documents": [
+      "6-Data/artifacts/measurement_plan.md"
+    ]
+  },
+  {
+    "name": "SRE / Security",
+    "role": "SRE/Sec",
+    "focus": "Runbooks, rollout, reliability",
+    "description": "Provide operational readiness artifacts and pilot reliability evidence.",
+    "requests": [
+      "Add detailed runbooks for incidents",
+      "Document canary + rollback strategy",
+      "Share reliability soak results/logs"
+    ],
+    "steps": [
+      "Populate planning/30_design/runbooks/ with per-incident guides",
+      "Note rollout parameters in planning/40_execution/risk_register.md",
+      "Place reliability logs in planning/50_pilot/evidence/qa/"
+    ],
+    "paths": [
+      "7-SRE/artifacts/sre_ops_plan.md",
+      "planning/30_design/runbooks/",
+      "planning/50_pilot/evidence/qa/"
+    ],
+    "documents": [
+      "7-SRE/artifacts/sre_ops_plan.md",
+      "planning/30_design/runbooks/README.md"
+    ]
+  }
+]

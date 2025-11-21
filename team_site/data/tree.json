@@ -1,0 +1,1510 @@
+[
+  {
+    "path": "0- Governance",
+    "name": "0- Governance",
+    "type": "dir",
+    "description": "Governance Framework + SOP",
+    "recommendation": "Read this first for roles, phases, checklists",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "0- Governance/1- Comprehensive Planning Framework (v1.0).md",
+        "name": "1- Comprehensive Planning Framework (v1.0).md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "1- SteeringDirections",
+    "name": "1- SteeringDirections",
+    "type": "dir",
+    "description": "Ideas, steering directives, requests",
+    "recommendation": "Steering persona artifacts, ideas, action items",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "1- SteeringDirections/ideas",
+        "name": "ideas",
+        "type": "dir",
+        "description": "Steering idea library",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "1- SteeringDirections/ideas/Multi-LLM Block Engineering Playbook (v1.0).md",
+            "name": "Multi-LLM Block Engineering Playbook (v1.0).md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "1- SteeringDirections/ideas/orchestrator_blocks_framework.md",
+            "name": "orchestrator_blocks_framework.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "1- SteeringDirections/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "1- SteeringDirections/requests/COMPLETION_REPORT.md",
+            "name": "COMPLETION_REPORT.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "1- SteeringDirections/requests/PERSONA_STATUS_AND_NEXT_STEPS.md",
+            "name": "PERSONA_STATUS_AND_NEXT_STEPS.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "1- SteeringDirections/requests/team_call.md",
+            "name": "team_call.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "1- SteeringDirections/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "2- Business",
+    "name": "2- Business",
+    "type": "dir",
+    "description": "Business persona workspace (BRD, ROI)",
+    "recommendation": "Budget, ROI models, business evidence",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "2- Business/artifacts",
+        "name": "artifacts",
+        "type": "dir",
+        "description": "Persona deliverables",
+        "recommendation": "Update with latest persona outputs",
+        "steps": [
+          "Open the template",
+          "Document latest updates",
+          "Link evidence"
+        ],
+        "children": [
+          {
+            "path": "2- Business/artifacts/brd.md",
+            "name": "brd.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "2- Business/references",
+        "name": "references",
+        "type": "dir",
+        "description": "Review notes & context",
+        "recommendation": "Review before modifying artifacts",
+        "steps": [],
+        "children": [
+          {
+            "path": "2- Business/references/review_notes.md",
+            "name": "review_notes.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "2- Business/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "2- Business/requests/input_request.md",
+            "name": "input_request.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "2- Business/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      },
+      {
+        "path": "2- Business/README.md",
+        "name": "README.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "3- Product",
+    "name": "3- Product",
+    "type": "dir",
+    "description": "Product persona workspace (PRD, RTM)",
+    "recommendation": "PRD, acceptance criteria, pilot narrative",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "3- Product/artifacts",
+        "name": "artifacts",
+        "type": "dir",
+        "description": "Persona deliverables",
+        "recommendation": "Update with latest persona outputs",
+        "steps": [
+          "Open the template",
+          "Document latest updates",
+          "Link evidence"
+        ],
+        "children": [
+          {
+            "path": "3- Product/artifacts/prd_v1.md",
+            "name": "prd_v1.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "3- Product/references",
+        "name": "references",
+        "type": "dir",
+        "description": "Review notes & context",
+        "recommendation": "Review before modifying artifacts",
+        "steps": [],
+        "children": [
+          {
+            "path": "3- Product/references/review_notes.md",
+            "name": "review_notes.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "3- Product/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "3- Product/requests/input_request.md",
+            "name": "input_request.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "3- Product/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      },
+      {
+        "path": "3- Product/README.md",
+        "name": "README.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "4-Engineering",
+    "name": "4-Engineering",
+    "type": "dir",
+    "description": "Engineering persona workspace (SRS, ADRs)",
+    "recommendation": "SRS, ADRs, schema docs, run logs",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "4-Engineering/artifacts",
+        "name": "artifacts",
+        "type": "dir",
+        "description": "Persona deliverables",
+        "recommendation": "Update with latest persona outputs",
+        "steps": [
+          "Open the template",
+          "Document latest updates",
+          "Link evidence"
+        ],
+        "children": [
+          {
+            "path": "4-Engineering/artifacts/srs.md",
+            "name": "srs.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "4-Engineering/references",
+        "name": "references",
+        "type": "dir",
+        "description": "Review notes & context",
+        "recommendation": "Review before modifying artifacts",
+        "steps": [],
+        "children": [
+          {
+            "path": "4-Engineering/references/review_notes.md",
+            "name": "review_notes.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "4-Engineering/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "4-Engineering/requests/input_request.md",
+            "name": "input_request.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "4-Engineering/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      },
+      {
+        "path": "4-Engineering/README.md",
+        "name": "README.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "5-QA",
+    "name": "5-QA",
+    "type": "dir",
+    "description": "Quality persona workspace (Quality Plan, metrics)",
+    "recommendation": "Quality plan, test metrics, gating policy",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "5-QA/artifacts",
+        "name": "artifacts",
+        "type": "dir",
+        "description": "Persona deliverables",
+        "recommendation": "Update with latest persona outputs",
+        "steps": [
+          "Open the template",
+          "Document latest updates",
+          "Link evidence"
+        ],
+        "children": [
+          {
+            "path": "5-QA/artifacts/quality_plan.md",
+            "name": "quality_plan.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "5-QA/references",
+        "name": "references",
+        "type": "dir",
+        "description": "Review notes & context",
+        "recommendation": "Review before modifying artifacts",
+        "steps": [],
+        "children": [
+          {
+            "path": "5-QA/references/review_notes.md",
+            "name": "review_notes.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "5-QA/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "5-QA/requests/input_request.md",
+            "name": "input_request.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "5-QA/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      },
+      {
+        "path": "5-QA/README.md",
+        "name": "README.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "6-Data",
+    "name": "6-Data",
+    "type": "dir",
+    "description": "Data & analytics workspace (measurement plan)",
+    "recommendation": "Instrumentation specs, dashboards, baselines",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "6-Data/artifacts",
+        "name": "artifacts",
+        "type": "dir",
+        "description": "Persona deliverables",
+        "recommendation": "Update with latest persona outputs",
+        "steps": [
+          "Open the template",
+          "Document latest updates",
+          "Link evidence"
+        ],
+        "children": [
+          {
+            "path": "6-Data/artifacts/measurement_plan.md",
+            "name": "measurement_plan.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "6-Data/references",
+        "name": "references",
+        "type": "dir",
+        "description": "Review notes & context",
+        "recommendation": "Review before modifying artifacts",
+        "steps": [],
+        "children": [
+          {
+            "path": "6-Data/references/review_notes.md",
+            "name": "review_notes.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "6-Data/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "6-Data/requests/input_request.md",
+            "name": "input_request.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "6-Data/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      },
+      {
+        "path": "6-Data/README.md",
+        "name": "README.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "7-SRE",
+    "name": "7-SRE",
+    "type": "dir",
+    "description": "SRE/Security workspace (SLOs, runbooks)",
+    "recommendation": "Runbooks, SLOs, rollback strategy",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "7-SRE/artifacts",
+        "name": "artifacts",
+        "type": "dir",
+        "description": "Persona deliverables",
+        "recommendation": "Update with latest persona outputs",
+        "steps": [
+          "Open the template",
+          "Document latest updates",
+          "Link evidence"
+        ],
+        "children": [
+          {
+            "path": "7-SRE/artifacts/sre_ops_plan.md",
+            "name": "sre_ops_plan.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "7-SRE/references",
+        "name": "references",
+        "type": "dir",
+        "description": "Review notes & context",
+        "recommendation": "Review before modifying artifacts",
+        "steps": [],
+        "children": [
+          {
+            "path": "7-SRE/references/review_notes.md",
+            "name": "review_notes.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "7-SRE/requests",
+        "name": "requests",
+        "type": "dir",
+        "description": "Requests from Steering",
+        "recommendation": "Close outstanding asks before next gate",
+        "steps": [],
+        "children": [
+          {
+            "path": "7-SRE/requests/input_request.md",
+            "name": "input_request.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "7-SRE/persona.md",
+        "name": "persona.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      },
+      {
+        "path": "7-SRE/README.md",
+        "name": "README.md",
+        "type": "file",
+        "description": "",
+        "recommendation": "",
+        "steps": []
+      }
+    ]
+  },
+  {
+    "path": "planning",
+    "name": "planning",
+    "type": "dir",
+    "description": "Planning package (phases 0\u20136)",
+    "recommendation": "All phase artifacts, runbooks, evidence",
+    "steps": [
+      "Review goals for this area",
+      "Update artifacts per requests",
+      "Notify SteeringDirections when complete"
+    ],
+    "children": [
+      {
+        "path": "planning/00_idea",
+        "name": "00_idea",
+        "type": "dir",
+        "description": "",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/00_idea/one_pager.md",
+            "name": "one_pager.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/10_discovery",
+        "name": "10_discovery",
+        "type": "dir",
+        "description": "",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/10_discovery/discovery_brief.md",
+            "name": "discovery_brief.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/20_definition",
+        "name": "20_definition",
+        "type": "dir",
+        "description": "",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/20_definition/acceptance_criteria.md",
+            "name": "acceptance_criteria.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/20_definition/measurement_spec.md",
+            "name": "measurement_spec.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/20_definition/ops_security_definition.md",
+            "name": "ops_security_definition.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/20_definition/prd_v1.md",
+            "name": "prd_v1.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/20_definition/technical_definition.md",
+            "name": "technical_definition.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/30_design",
+        "name": "30_design",
+        "type": "dir",
+        "description": "",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/30_design/architecture_diagrams",
+            "name": "architecture_diagrams",
+            "type": "dir",
+            "description": "",
+            "recommendation": "",
+            "steps": [],
+            "children": [
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_a_sequence.md",
+                "name": "delivery_a_sequence.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_a_sequence.png",
+                "name": "delivery_a_sequence.png",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_a_sequence.puml",
+                "name": "delivery_a_sequence.puml",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_b_components.md",
+                "name": "delivery_b_components.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_b_components.png",
+                "name": "delivery_b_components.png",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_b_components.puml",
+                "name": "delivery_b_components.puml",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_c_integration.md",
+                "name": "delivery_c_integration.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_c_integration.png",
+                "name": "delivery_c_integration.png",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/delivery_c_integration.puml",
+                "name": "delivery_c_integration.puml",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/export_instructions.md",
+                "name": "export_instructions.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/architecture_diagrams/README.md",
+                "name": "README.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/30_design/interface_contracts",
+            "name": "interface_contracts",
+            "type": "dir",
+            "description": "",
+            "recommendation": "",
+            "steps": [],
+            "children": [
+              {
+                "path": "planning/30_design/interface_contracts/block_blueprint_contract.md",
+                "name": "block_blueprint_contract.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/interface_contracts/context_bundle_contract.md",
+                "name": "context_bundle_contract.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/interface_contracts/flows_api.md",
+                "name": "flows_api.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/interface_contracts/README.md",
+                "name": "README.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/30_design/runbooks",
+            "name": "runbooks",
+            "type": "dir",
+            "description": "Operational runbooks",
+            "recommendation": "Validate via drills before launch",
+            "steps": [],
+            "children": [
+              {
+                "path": "planning/30_design/runbooks/flow_failure_response.md",
+                "name": "flow_failure_response.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/runbooks/README.md",
+                "name": "README.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/runbooks/test_generation.md",
+                "name": "test_generation.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/30_design/schemas",
+            "name": "schemas",
+            "type": "dir",
+            "description": "Contract schemas & examples",
+            "recommendation": "Use as source of truth for contracts",
+            "steps": [],
+            "children": [
+              {
+                "path": "planning/30_design/schemas/contracts",
+                "name": "contracts",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/30_design/schemas/contracts/compliance_attestation",
+                    "name": "compliance_attestation",
+                    "type": "dir",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": [],
+                    "children": [
+                      {
+                        "path": "planning/30_design/schemas/contracts/compliance_attestation/input.v1.json",
+                        "name": "input.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      },
+                      {
+                        "path": "planning/30_design/schemas/contracts/compliance_attestation/output.v1.json",
+                        "name": "output.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      }
+                    ]
+                  },
+                  {
+                    "path": "planning/30_design/schemas/contracts/financial_reporting",
+                    "name": "financial_reporting",
+                    "type": "dir",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": [],
+                    "children": [
+                      {
+                        "path": "planning/30_design/schemas/contracts/financial_reporting/input.v1.json",
+                        "name": "input.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      },
+                      {
+                        "path": "planning/30_design/schemas/contracts/financial_reporting/output.v1.json",
+                        "name": "output.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      }
+                    ]
+                  },
+                  {
+                    "path": "planning/30_design/schemas/contracts/observability_dashboard",
+                    "name": "observability_dashboard",
+                    "type": "dir",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": [],
+                    "children": [
+                      {
+                        "path": "planning/30_design/schemas/contracts/observability_dashboard/input.v1.json",
+                        "name": "input.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      },
+                      {
+                        "path": "planning/30_design/schemas/contracts/observability_dashboard/output.v1.json",
+                        "name": "output.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      }
+                    ]
+                  },
+                  {
+                    "path": "planning/30_design/schemas/contracts/structure_trio",
+                    "name": "structure_trio",
+                    "type": "dir",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": [],
+                    "children": [
+                      {
+                        "path": "planning/30_design/schemas/contracts/structure_trio/input.v1.json",
+                        "name": "input.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      },
+                      {
+                        "path": "planning/30_design/schemas/contracts/structure_trio/output.v1.json",
+                        "name": "output.v1.json",
+                        "type": "file",
+                        "description": "",
+                        "recommendation": "",
+                        "steps": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "path": "planning/30_design/schemas/examples",
+                "name": "examples",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/30_design/schemas/examples/compliance_attestation_blueprint.yaml",
+                    "name": "compliance_attestation_blueprint.yaml",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/30_design/schemas/examples/financial_reporting_blueprint.yaml",
+                    "name": "financial_reporting_blueprint.yaml",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/30_design/schemas/examples/observability_dashboard_blueprint.yaml",
+                    "name": "observability_dashboard_blueprint.yaml",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/30_design/schemas/block_blueprint.schema.json",
+                "name": "block_blueprint.schema.json",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/schemas/README.md",
+                "name": "README.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/30_design/schemas/task_object.schema.json",
+                "name": "task_object.schema.json",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/30_design/dashboards_spec.md",
+            "name": "dashboards_spec.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/30_design/quality_plan.md",
+            "name": "quality_plan.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/40_execution",
+        "name": "40_execution",
+        "type": "dir",
+        "description": "",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/40_execution/critical_path.md",
+            "name": "critical_path.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/40_execution/dependencies.md",
+            "name": "dependencies.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/40_execution/risk_register.md",
+            "name": "risk_register.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/40_execution/wbs.xlsx",
+            "name": "wbs.xlsx",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/50_pilot",
+        "name": "50_pilot",
+        "type": "dir",
+        "description": "Pilot plan + evidence",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/50_pilot/evidence",
+            "name": "evidence",
+            "type": "dir",
+            "description": "Pilot/launch evidence",
+            "recommendation": "Drop metrics/logs here after runs",
+            "steps": [
+              "Export metrics/logs",
+              "Paste into templates",
+              "Reference in approvals"
+            ],
+            "children": [
+              {
+                "path": "planning/50_pilot/evidence/biz",
+                "name": "biz",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/50_pilot/evidence/biz/roi_template.md",
+                    "name": "roi_template.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/50_pilot/evidence/data",
+                "name": "data",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/50_pilot/evidence/data/dashboards_summary.md",
+                    "name": "dashboards_summary.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/50_pilot/evidence/qa",
+                "name": "qa",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/50_pilot/evidence/qa/flowengine_run_logs.md",
+                    "name": "flowengine_run_logs.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/50_pilot/evidence/qa/template_metrics.md",
+                    "name": "template_metrics.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/50_pilot/evidence/sre",
+                "name": "sre",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/50_pilot/evidence/sre/soak_test_results.md",
+                    "name": "soak_test_results.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/50_pilot/evidence/README.md",
+                "name": "README.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/50_pilot/pilot_plan.md",
+            "name": "pilot_plan.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/60_launch",
+        "name": "60_launch",
+        "type": "dir",
+        "description": "",
+        "recommendation": "",
+        "steps": [],
+        "children": [
+          {
+            "path": "planning/60_launch/comms",
+            "name": "comms",
+            "type": "dir",
+            "description": "",
+            "recommendation": "",
+            "steps": [],
+            "children": [
+              {
+                "path": "planning/60_launch/comms/announcement_email.md",
+                "name": "announcement_email.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/60_launch/comms/executive_summary.md",
+                "name": "executive_summary.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/60_launch/comms/slack_post.md",
+                "name": "slack_post.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/60_launch/comms/status_page_update.md",
+                "name": "status_page_update.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/60_launch/training",
+            "name": "training",
+            "type": "dir",
+            "description": "Enablement assets",
+            "recommendation": "Add guides/slides/recordings for launch",
+            "steps": [],
+            "children": [
+              {
+                "path": "planning/60_launch/training/guides",
+                "name": "guides",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/60_launch/training/guides/01_cli_quickstart.md",
+                    "name": "01_cli_quickstart.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/60_launch/training/guides/02_block_authoring.md",
+                    "name": "02_block_authoring.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/60_launch/training/guides/03_quality_ci_gating.md",
+                    "name": "03_quality_ci_gating.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/60_launch/training/guides/04_runbooks_rollback.md",
+                    "name": "04_runbooks_rollback.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/60_launch/training/guides/05_metrics_dashboards.md",
+                    "name": "05_metrics_dashboards.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/60_launch/training/slides",
+                "name": "slides",
+                "type": "dir",
+                "description": "",
+                "recommendation": "",
+                "steps": [],
+                "children": [
+                  {
+                    "path": "planning/60_launch/training/slides/01_cli_quickstart_slides.md",
+                    "name": "01_cli_quickstart_slides.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  },
+                  {
+                    "path": "planning/60_launch/training/slides/02_to_05_combined_slides.md",
+                    "name": "02_to_05_combined_slides.md",
+                    "type": "file",
+                    "description": "",
+                    "recommendation": "",
+                    "steps": []
+                  }
+                ]
+              },
+              {
+                "path": "planning/60_launch/training/enablement_plan.md",
+                "name": "enablement_plan.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/60_launch/training/README.md",
+                "name": "README.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              },
+              {
+                "path": "planning/60_launch/training/recordings.md",
+                "name": "recordings.md",
+                "type": "file",
+                "description": "",
+                "recommendation": "",
+                "steps": []
+              }
+            ]
+          },
+          {
+            "path": "planning/60_launch/launch_runbook.md",
+            "name": "launch_runbook.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      },
+      {
+        "path": "planning/approvals",
+        "name": "approvals",
+        "type": "dir",
+        "description": "Gate sign-off docs",
+        "recommendation": "Fill before each gate review",
+        "steps": [
+          "Confirm evidence is ready",
+          "Fill gate doc",
+          "Collect signatures"
+        ],
+        "children": [
+          {
+            "path": "planning/approvals/G2_signoff.md",
+            "name": "G2_signoff.md",
+            "type": "file",
+            "description": "Gate approval template",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/approvals/G3_signoff.md",
+            "name": "G3_signoff.md",
+            "type": "file",
+            "description": "Gate approval template",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/approvals/G4_signoff.md",
+            "name": "G4_signoff.md",
+            "type": "file",
+            "description": "Gate approval template",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/approvals/G5_signoff.md",
+            "name": "G5_signoff.md",
+            "type": "file",
+            "description": "Gate approval template",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/approvals/G6_signoff.md",
+            "name": "G6_signoff.md",
+            "type": "file",
+            "description": "Gate approval template",
+            "recommendation": "",
+            "steps": []
+          },
+          {
+            "path": "planning/approvals/gate_schedule.md",
+            "name": "gate_schedule.md",
+            "type": "file",
+            "description": "",
+            "recommendation": "",
+            "steps": []
+          }
+        ]
+      }
+    ]
+  }
+]

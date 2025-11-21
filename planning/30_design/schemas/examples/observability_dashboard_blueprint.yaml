@@ -1,0 +1,30 @@
+block_id: observability_dashboard_block
+version: 0.1.0
+purpose: "Provision standard monitoring dashboards for FlowEngine"
+faces:
+  bottom_structure_spec:
+    datastore: grafana
+    folders: ["FlowEngine", "Catalog"]
+  front_ui_spec:
+    type: dashboard
+    widgets:
+      - type: timeseries
+        metric: flow_success
+  back_integration_spec:
+    integrations:
+      - system: grafana_api
+        action: create_dashboard
+  top_logic_spec:
+    rules:
+      - "Alert thresholds follow SLO doc"
+  left_input_contract:
+    schema_ref: contracts/observability_dashboard/input.v1.json
+  right_output_contract:
+    schema_ref: contracts/observability_dashboard/output.v1.json
+acceptance_criteria:
+  - id: AC-OBS-001
+    text: "Critical alerts fire when success rate <99% for 5 minutes"
+traceability:
+  - ac_id: AC-OBS-001
+    tests:
+      - tests/generated/observability/test_alert_thresholds.py

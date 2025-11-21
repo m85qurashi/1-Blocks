@@ -1,0 +1,33 @@
+block_id: compliance_attestation_block
+version: 1.0.0
+purpose: "Generate auditable compliance attestation packets"
+faces:
+  bottom_structure_spec:
+    datastore: documentdb
+    collections:
+      - name: attestation_packets
+        indexes:
+          - fields: [attestation_id]
+  front_ui_spec:
+    type: cli
+    prompts:
+      - "Provide attestation id"
+  back_integration_spec:
+    integrations:
+      - system: jira
+        action: create_issue
+    webhooks:
+      - target: audit-log
+  top_logic_spec:
+    rules:
+      - "All controls marked fail must include remediation"
+  left_input_contract:
+    schema_ref: contracts/compliance_attestation/input.v1.json
+  right_output_contract:
+    schema_ref: contracts/compliance_attestation/output.v1.json
+acceptance_criteria:
+  - id: AC-COMP-001
+    text: "Failing controls must produce remediation checklist"
+traceability:
+  - ac_id: AC-COMP-001
+    tests: [tests/generated/compliance_attestation/test_fail_controls.py]

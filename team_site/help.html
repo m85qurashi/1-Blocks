@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Execution Help | SteeringDirections Hub</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/help.css" />
+</head>
+<body class="help-page">
+  <header class="help-header">
+    <div>
+      <h1>Execution Help Center</h1>
+      <p>Step-by-step guide for running Phase 6 (10-repo soak) and Phase 7 (org-wide rollout).</p>
+    </div>
+    <a class="back-link" href="index.html">← Back to Requests Hub</a>
+  </header>
+
+  <main class="help-content">
+    <section>
+      <h2>Phase 6 — 10-Repo Soak (Nov 16–30)</h2>
+      <ol>
+        <li><strong>Select repos:</strong> follow criteria in `planning/60_launch/launch_runbook.md` §2.1.</li>
+        <li><strong>Prep checklists:</strong> run Pre-Rollout Checklist (§1) per repo (infra, config, training).</li>
+        <li><strong>Onboard teams:</strong> invite to training sessions (`planning/60_launch/training/`).</li>
+        <li><strong>Daily standup:</strong> 9 AM PT with Platform + QA + SRE (log notes in runbook §2.4).</li>
+        <li><strong>Monitor dashboards:</strong> Grafana links in `planning/50_pilot/evidence/data/dashboards_summary.md`.</li>
+        <li><strong>Capture evidence:</strong>
+          <ul>
+            <li>QA metrics → `planning/50_pilot/evidence/qa/template_metrics.md`</li>
+            <li>SRE logs → `planning/50_pilot/evidence/sre/soak_test_results.md`</li>
+            <li>Engineering run logs → `planning/50_pilot/evidence/qa/flowengine_run_logs.md`</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Phase 7 — Org-Wide Rollout (Dec 9–20)</h2>
+      <ol>
+        <li><strong>Confirm G6 GO:</strong> update `planning/approvals/G6_signoff.md` with final evidence.</li>
+        <li><strong>Wave assignments:</strong> publish schedule (Wave 1: Dec 9–13, Wave 2: Dec 16–20).</li>
+        <li><strong>Run enablement:</strong> deliver modules per `planning/60_launch/training/enablement_plan.md`.</li>
+        <li><strong>Go-live day:</strong> follow hour-by-hour plan (runbook §4) and post Slack updates.</li>
+        <li><strong>Monitor & alert:</strong> use runbook §5 thresholds; escalate via P1/P2/P3 playbooks.</li>
+        <li><strong>Rollback when needed:</strong> choose scenario in runbook §6 (pilot, previous version, manual review).</li>
+        <li><strong>Post-launch support:</strong> host office hours (runbook §7) and track incidents (runbook §8).</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Where to Update Evidence</h2>
+      <ul>
+        <li><code>planning/50_pilot/evidence/biz/roi_template.md</code> — Business metrics</li>
+        <li><code>planning/50_pilot/evidence/qa/template_metrics.md</code> — QA metrics per wave</li>
+        <li><code>planning/50_pilot/evidence/data/dashboards_summary.md</code> — Dashboard screenshots/links</li>
+        <li><code>planning/50_pilot/evidence/sre/soak_test_results.md</code> — Reliability logs + PIRs</li>
+        <li><code>planning/approvals/G6_signoff.md</code> — Update statuses and attach evidence references</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Support Channels</h2>
+      <ul>
+        <li><strong>Slack:</strong> #orchestrator-launch (daily updates, questions)</li>
+        <li><strong>Email:</strong> SteeringDirections@ (escalations)</li>
+        <li><strong>Runbooks:</strong> `planning/60_launch/launch_runbook.md` (Sections 5–8)</li>
